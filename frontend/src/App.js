@@ -4,12 +4,17 @@ import { useDispatch } from 'react-redux'
 
 import Form from './Components/Form/Form.js'
 import Posts from './Components/Posts/Posts.js'
+import { getPosts } from './actions/posts.js'
 
 import memories from './images/memories.png'
 import useStyles from './styles'
 const App = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(getPosts())
+    }, [dispatch])
 
     return (
         <Container maxwidth="lg">
