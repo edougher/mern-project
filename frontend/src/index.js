@@ -7,8 +7,12 @@ import thunk from 'redux-thunk';
 import reducers from './reducers'
 
 import App from './App';
+import './index.css'
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)))
+const middlewareEnhancer = compose(applyMiddleware(thunk),  window.devToolsExtension())
+
+//const store = createStore(reducers, compose(applyMiddleware(thunk)), window.devToolsExtension ? window.devToolsExtension() : f => f)
+const store = createStore(reducers, middlewareEnhancer)
 
 
 ReactDom.render(
