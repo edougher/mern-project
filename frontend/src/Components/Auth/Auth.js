@@ -20,7 +20,7 @@ const Auth = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    const handleShowPassword = () => setShowpassword => ((prevShowPassword) => !prevShowPassword)
+    const handleShowPassword = () => setShowpassword(!showPassword)
 
     const handleSubmit = (e) => {
         e.preventDefault()
