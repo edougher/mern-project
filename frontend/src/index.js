@@ -9,8 +9,8 @@ import reducers from './reducers'
 import App from './App';
 import './index.css'
 
-const middlewareEnhancer = compose(applyMiddleware(thunk),  window.devToolsExtension())
-
+const middlewareEnhancer = compose(applyMiddleware(thunk),  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+//const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 //const store = createStore(reducers, compose(applyMiddleware(thunk)), window.devToolsExtension ? window.devToolsExtension() : f => f)
 const store = createStore(reducers, middlewareEnhancer)
 
