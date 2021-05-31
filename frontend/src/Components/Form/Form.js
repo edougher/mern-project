@@ -20,7 +20,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        debugger
+        
         if(currentId === 0){
             dispatch(createPost({ ...postData, name: user?.result?.name }))
         } else {
