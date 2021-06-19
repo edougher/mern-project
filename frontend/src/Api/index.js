@@ -10,9 +10,6 @@ API.interceptors.request.use((req) => {
     return req;
 })
 
-//const url = 'http://localhost:5000/posts';
-//const url = 'https://memories-app-mern-one.herokuapp.com/posts'
-
 export const fetchPosts = () => API.get('/posts')
 export const createPost = (newPost) => API.post('/posts', newPost)
 export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost)
