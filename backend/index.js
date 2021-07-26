@@ -1,4 +1,3 @@
-
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
@@ -7,6 +6,7 @@ import dotenv from 'dotenv';
 import postRoutes from './routes/posts.js';
 import userRouter from "./routes/user.js";
 
+//newrelic.config()
 dotenv.config()
 const app = express();
 
@@ -25,4 +25,3 @@ mongoose.connect(`${process.env.CONNECTION_URL}`, { useNewUrlParser: true, useUn
 
 mongoose.set('useFindAndModify', false);
 
-//test swap
