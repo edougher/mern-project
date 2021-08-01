@@ -16,3 +16,4 @@ react-google-login
 redux
 redux-thunk
 
+Live site here https://mernmemoriestwo.herokuapp.com/
