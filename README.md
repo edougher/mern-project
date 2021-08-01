@@ -8,12 +8,12 @@ jsonwebtoken
 mongoose
 
 The dependencies for the frontend/client side are:
-axios
-jwt-decode
-moment
-react-file-base64
-react-google-login
-redux
-redux-thunk
+  axios
+  jwt-decode
+  moment
+  react-file-base64
+  react-google-login
+  redux
+  redux-thunk
 
 Live site here https://mernmemoriestwo.herokuapp.com/
